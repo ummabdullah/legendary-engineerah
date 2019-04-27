@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //the main within this class is the starting location
 @SpringBootApplication     //we tell springboot to start here by this annotation
-// utlitty springboot allows us to use to startup here
+// utlity springboot allows us to use to startup here
 
 
 public class CourseApiApp {

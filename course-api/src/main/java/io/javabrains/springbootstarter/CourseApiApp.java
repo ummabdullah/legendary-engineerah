@@ -13,6 +13,7 @@ public class CourseApiApp {
 	public static void main(String[] args) {
 		SpringApplication.run(CourseApiApp.class, args); 
 		// your calling the static method run and passing the class and args
+		
 
 	}
 

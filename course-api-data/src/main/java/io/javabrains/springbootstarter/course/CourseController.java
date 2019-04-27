@@ -21,17 +21,17 @@ public class CourseController {
 	private CourseService courseService;
 	
 	
-	@RequestMapping("/topics/{id}/courses")
+	@RequestMapping(method = RequestMethod.GET, value = "/topics/{id}/courses")
 	public ResponseEntity<List<Course>> getAllCourses (@PathVariable String id) {
 		return new ResponseEntity<>(courseService.getAllCourses(id), HttpStatus.FOUND);
 	}
 	
-	@RequestMapping("/topics/{topicId}/courses/{id}")
+	@RequestMapping(method = RequestMethod.GET, value = "/topics/{topicId}/courses/{id}")
 	public Optional<Course> getCourse (@PathVariable String id) {
 		return courseService.getCourse(id);
 	}
 	
-	@RequestMapping(method = RequestMethod.POST, value="/topics/{topicId}/courses/")
+	@RequestMapping(method = RequestMethod.POST, value="/topics/{topicId}/courses")
 	public void addCourse(@RequestBody Course course, @PathVariable String topicId) {
 		course.setTopic(new Topic(topicId, "",""));
 		courseService.addCourse(course);

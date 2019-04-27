@@ -10,4 +10,8 @@ public class CourseApiDataApplication {
 		SpringApplication.run(CourseApiDataApplication.class, args);
 	}
 
+	
+	// this will get application running, picksup all services, resources etc, setups db all by this one command
+	
+	
 }

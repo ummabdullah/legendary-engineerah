@@ -15,7 +15,8 @@ public class HttpClientQuranGetTest2 {
 		try {
 			
 			
-			String url = "http://api.alquran.cloud/v1/page/1/quran-uthmani";
+			String url = "http://staging.quran.com:3000/api/v3/chapters/1/verses?recitation=1&translations=21&language=en&page=0&offset=0&limit=10&text_type=words";
+			//"http://api.alquran.cloud/v1/page/1/quran-uthmani";
 			
 
 			HttpClient client = HttpClientBuilder.create().build();

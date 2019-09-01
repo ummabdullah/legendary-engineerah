@@ -24,11 +24,11 @@ public class HttpClientPostTest {
 			HttpPost post = new HttpPost(url);
 
 			List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
-//			urlParameters.add(new BasicNameValuePair("id", "java2"));
-//			urlParameters.add( new BasicNameValuePair("name", "java core name2"));
-//			urlParameters.add( new BasicNameValuePair("description", "Java2 core despcription"));
-			
-		post.setEntity(new UrlEncodedFormEntity((List<? extends org.apache.http.NameValuePair>) urlParameters));
+			/*urlParameters.add((NameValuePair) new BasicNameValuePair("id", "java2"));
+			urlParameters.add( (NameValuePair) new BasicNameValuePair("name", "java core name2"));
+			urlParameters.add( (NameValuePair) new BasicNameValuePair("description", "Java2 core despcription"));
+			*/
+			post.setEntity(new UrlEncodedFormEntity((List<? extends org.apache.http.NameValuePair>) urlParameters));
 	
 
 			HttpResponse response = client.execute(post);
